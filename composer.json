@@ -1,0 +1,13 @@
+{
+    "name": "ermile/dash",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ermile/dash"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "mysql": ">=4.1.2*"
+    }
+}
