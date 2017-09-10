@@ -6,6 +6,7 @@
             "url": "https://github.com/geeksesi/dash"
         }
     ],
+    "version":"1.0.0",
     "require": {
         "php": "7.0",
         "mysql": "4.1"
