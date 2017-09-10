@@ -1,9 +1,9 @@
 {
-    "name": "ermile/dash",
+    "name": "geeksesi/dash",
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/ermile/dash"
+            "url": "https://github.com/geeksesi/dash"
         }
     ],
     "require": {
