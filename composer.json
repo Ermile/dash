@@ -1,5 +1,5 @@
 {
-    "name": "geeksesi/dash",
+    "name": "ermile/dash",
     "description": "dash php framework",
     "license": "none",
     "keywords": [
@@ -13,7 +13,7 @@
 
         }
     ],
-    "homepage": "https://github.com/geeksesi/dash",
+    "homepage": "https://github.com/ermile/dash",
     "require": {
         "php": ">=7.0"
     }
