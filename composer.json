@@ -1,11 +1,21 @@
 {
     "name": "geeksesi/dash",
-    "repositories": [
+    "description": "dash php framework",
+    "license": "none",
+    "keywords": [
+        "php",
+        "framework"
+    ],
+    "authors": [
         {
-            "type": "vcs",
-            "url": "https://github.com/geeksesi/dash"
+            "name": "ermile",
+            "email": "info@ermile.com"
+
         }
     ],
-    "version":"1.0.0"
-    
+    "homepage": "https://github.com/geeksesi/dash",
+    "require": {
+        "php": ">=7.0",
+        "symfony/symfony": ">=4.1"
+    }
 }
