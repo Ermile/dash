@@ -15,7 +15,6 @@
     ],
     "homepage": "https://github.com/geeksesi/dash",
     "require": {
-        "php": ">=7.0",
-        "symfony/symfony": ">=4.1"
+        "php": ">=7.0"
     }
 }
