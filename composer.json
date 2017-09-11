@@ -1,0 +1,20 @@
+{
+    "name": "geeksesi/dash",
+    "description": "dash php framework",
+    "license": "none",
+    "keywords": [
+        "php",
+        "framework"
+    ],
+    "authors": [
+        {
+            "name": "ermile",
+            "email": "info@ermile.com"
+
+        }
+    ],
+    "homepage": "https://github.com/geeksesi/dash",
+    "require": {
+        "php": ">=7.0"
+    }
+}
