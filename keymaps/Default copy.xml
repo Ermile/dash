@@ -1,9 +1,0 @@
-<keymap version="1" name="Default copy" parent="Default for XWin">
-  <action id="CollapseDocComments">
-    <keyboard-shortcut first-keystroke="alt subtract" second-keystroke="shift ctrl numpad2" />
-  </action>
-  <action id="FixDocComment">
-    <keyboard-shortcut first-keystroke="alt add" />
-    <keyboard-shortcut first-keystroke="alt add" second-keystroke="shift alt numpad1" />
-  </action>
-</keymap>
