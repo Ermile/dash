@@ -5,9 +5,9 @@
 
 <div class="tbox txtc">
   <span class="sf-male-rounded-1 fs50"></span>
-  <h3>Unbelievable Styles!</h3>
-  <p>Definitions aren't limited to just buttons on a page. Siftal's components allow several distinct types of definitions: elements, collections, views, modules and behaviors which cover the gamut of interface design.</p>
-  <p>For improved cross-browser rendering, we use <a href='sample/reset'>special reset</a> to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.</p>
+  <h3>{%trans Unbelievable Styles! %}</h3>
+  <p>{%trans Definitions aren't limited to just buttons on a page. Siftal's components allow several distinct types of definitions: elements, collections, views, modules and behaviors which cover the gamut of interface design. %}</p>
+  <p>{%trans For improved cross-browser rendering, we use <a href='sample/reset'>special reset</a> to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements. %}</p>
 </div>
 
 <div class="f cbox">
@@ -47,30 +47,30 @@
 
 {%block buttons%}
 <div class="pA10">
-  <h3><a href='sample/button'>Button</a></h3>
-  <button class="mA3 btn secondary">Primary</button>
-  <button class="mA3 btn sm warn">Warn</button>
-  <button class="mA3 btn xs info">Info</button>
-  <a href='sample/button' class="btn primary block mA5">Check buttons collection</a>
+  <h3><a href='sample/button'>{%trans Button %}</a></h3>
+  <button class="mA3 btn secondary">{%trans Primary %}</button>
+  <button class="mA3 btn sm warn">{%trans Warn %}</button>
+  <button class="mA3 btn xs info">{%trans Info %}</button>
+  <a href='sample/button' class="btn primary block mA5">{%trans Check buttons collection %}</a>
 </div>
 {%endblock%}
 
 
 {%block messages%}
 <div class="pA10">
-  <h3><a href='sample/msg'>Messages</a></h3>
-  <div class="msg warn2">This site uses cookies</div>
+  <h3><a href='sample/msg'>{%trans Messages %}</a></h3>
+  <div class="msg warn2">{%trans This site uses cookies %}</div>
   <div class="msg success2 f">
     <div class="cauto">
       <span class="sf-load-c spiny fs10 pRa25 vlmiddle"></span>
     </div>
-    <div class="c">Hello dear!</div>
+    <div class="c">{%trans Hello dear! %}</div>
   </div>
   <div class="msg danger2">
-    <div class="title">Looking for help?</div>
+    <div class="title">{%trans Looking for help? %}</div>
     <ul class="list">
-      <li>Use our help center</li>
-      <li>Check our FAQ</li>
+      <li>{%trans Use our help center %}</li>
+      <li>{%trans Check our FAQ %}</li>
     </ul>
   </div>
 </div>
@@ -79,7 +79,7 @@
 
 {%block icons%}
 <div class="pA10">
-  <h3><a href='sample/icon' data-direct>Icons</a></h3>
+  <h3><a href='sample/icon' data-direct>{%trans Icons %}</a></h3>
   <div class="fs20">
     <span class="compact pA15 sf-car"></span>
     <span class="compact pA15 sf-trophy"></span>
@@ -104,9 +104,9 @@
 
 {%block badge%}
 <div class="pA10">
-  <h3><a href='sample/badge'>Badge</a></h3>
-  <h4 class="fs14">Posts <span class="badge primary">Add New</span></h4>
-  <button class="mA5 btn">Notification <span class="badge">7</span></button>
+  <h3><a href='sample/badge'>{%trans Badge %}</a></h3>
+  <h4 class="fs14">Posts <span class="badge primary">{%trans Add New %}</span></h4>
+  <button class="mA5 btn">{%trans Notification %}<span class="badge">7</span></button>
   <span class="badge rounded">125</span>
   <span class="badge rounded success">64</span>
   <span class="badge rounded warn">7</span>
@@ -117,10 +117,10 @@
 {%block breadcrumb%}
 <div class="pA15">
   <nav class="breadcrumb">
-    <a href="{{url.base}}/cp/sample/breadcrumb" tabindex="-1"><span class="fa fa-home"></span> Home</a>
-    <a href="{{url.base}}/cp/sample/breadcrumb" tabindex="-1">Control Panel</a>
-    <a href="{{url.base}}/cp/sample/breadcrumb" tabindex="-1">Sample</a>
-    <a href="{{url.base}}/cp/sample/breadcrumb">Breadcrumb</a>
+    <a href="{{url.base}}/cp/sample/breadcrumb" tabindex="-1"><span class="fa fa-home"></span>{%trans Home %}</a>
+    <a href="{{url.base}}/cp/sample/breadcrumb" tabindex="-1">{%trans Control Panel %}</a>
+    <a href="{{url.base}}/cp/sample/breadcrumb" tabindex="-1">{%trans Sample %}</a>
+    <a href="{{url.base}}/cp/sample/breadcrumb">{%trans Breadcrumb %}</a>
   </nav>
 </div>
 {%endblock%}
@@ -128,15 +128,15 @@
 
 {%block pagination%}
 <div class="pA10">
-  <h3><a href='sample/pagination'>Pagination</a></h3>
+  <h3><a href='sample/pagination'>{%trans Pagination %}</a></h3>
     <nav class="pagination info">
-      <a href='/cp/sample/pagination' class="prev disabled">Previous</a>
+      <a href='/cp/sample/pagination' class="prev disabled">{%trans Previous %}</a>
       <a href='/cp/sample/pagination'>...</a>
       <a href='/cp/sample/pagination'>6</a>
       <a class='active'>7</a>
       <a href='/cp/sample/pagination'>8</a>
       <a>...</a>
-      <a href='/cp/sample/pagination' class="next">Next</a>
+      <a href='/cp/sample/pagination' class="next">{%trans Next %}</a>
     </nav>
 </div>
 {%endblock%}
@@ -144,7 +144,7 @@
 
 {%block progress%}
 <div class="pA10">
-  <h3><a href='sample/progress'>Progress</a></h3>
+  <h3><a href='sample/progress'>{%trans Progress %}</a></h3>
   <div class="pA15">
     <progress value="76" max="100"></progress>
   </div>
@@ -157,15 +157,15 @@
 
 {%block tbl%}
 <div class="pA10">
-  <h3><a href='sample/table'>Table</a></h3>
+  <h3><a href='sample/table'>{%trans Table %}</a></h3>
   <table class="tbl zebra">
     <thead class="primary">
-      <tr><th>#</th><th>First Name</th><th>Last Name</th><th>Username</th></tr>
+      <tr><th>#</th><th>{%trans First Name %}</th><th>{%trans Last Name %}</th><th>{%trans Username %}</th></tr>
     </thead>
     <tbody>
-      <tr><th>1</th><td>Javad</td><td>Evazzadeh</td><td class="collapsing">@evazzadeh</td></tr>
-      <tr><th>2</th><td>Reza</td><td>Mohiti</td><td>@biqarar</td></tr>
-      <tr><th>3</th><td>Hasan</td><td>Salehi</td><td>@baravak</td></tr>
+      <tr><th>1</th><td>{%trans Javad %}</td><td>{%trans Evazzadeh %}</td><td class="collapsing">@evazzadeh</td></tr>
+      <tr><th>2</th><td>{%trans Reza %}</td><td>{%trans Mohiti %}</td><td>@biqarar</td></tr>
+      <tr><th>3</th><td>{%trans Hasan %}</td><td>{%trans Salehi %}</td><td>@baravak</td></tr>
     </tbody>
     <tfoot>
       <tr><th>-</th><th colspan="3">Footer</th></tr>
@@ -177,20 +177,20 @@
 
 {%block input%}
 <div class="pA10">
-  <h3><a href='sample/input'>Input</a></h3>
-    <input type="text" placeholder="Type..." class="input">
+  <h3><a href='sample/input'>{%trans Input %}</a></h3>
+    <input type="text" placeholder="{%trans Type..." class="input">
     <div class="input pTB10">
       <label class="addon" for='sAddon1'>@</label>
-      <input type="text" placeholder="Type..." id='sAddon1'>
+      <input type="text" placeholder="{%trans Type... %}" id='sAddon1'>
     </div>
     <div class="input pTB10">
       <label class="addon" for='sAddon4'>$</label>
-      <input type="text" placeholder="Type..." id='sAddon4'>
+      <input type="text" placeholder="{%trans Type... %}" id='sAddon4'>
       <label class="addon" for='sAddon4'>.00</label>
     </div>
     <div class="input pTB10 lg">
       <span class="addon btn danger" data-val='-5' data-connect='plus'>+</span>
-      <input type="number" placeholder="Time.." class="txtc" name="plus" step="5" min="0" max="1440">
+      <input type="number" placeholder="{%trans Time.. %}" class="txtc" name="plus" step="5" min="0" max="1440">
       <span class="addon btn success" data-val='10' data-connect='plus'>-</span>
     </div>
 </div>
@@ -199,7 +199,7 @@
 
 {%block txt%}
 <div class="pA10">
-  <h3><a href='sample/txt'>Textarea</a></h3>
+  <h3><a href='sample/txt'>{%trans Textarea %}</a></h3>
    <textarea class="txt mTB10"></textarea>
    <textarea class="txt mTB10" rows="6"></textarea>
 </div>
@@ -208,26 +208,26 @@
 
 {%block vcard%}
 <div class="pA10">
-  <h3><a href='sample/vcard'>Vcard</a></h3>
+  <h3><a href='sample/vcard'>{%trans Vcard %}</a></h3>
       <div class="vcard shadow mA10">
         <img src="http://code.ermile.dev/siftal/images/avatar/1.png">
         <div class="content">
-          <a class="header">Ermile</a>
-          <div class="meta"><span>Joined in 2018</span></div>
-          <div class="desc">Ermile is our company in Qom!</div>
+          <a class="header">{%trans Ermile %}</a>
+          <div class="meta"><span>{%trans Joined in 2018 %}</span></div>
+          <div class="desc">{%trans Ermile is our company in Qom! %}</div>
         </div>
-        <div class="footer"><i class="sf-users"></i> 123 Friends</div>
+        <div class="footer"><i class="sf-users"></i>{%trans  123 Friends %}</div>
       </div>
     <div class="vcard shadow mA10">
       <div class="content f">
         <div class="c">
-          <a class="header">Ermile</a>
-          <div class="meta"><span>Joined in 2018</span></div>
+          <a class="header">{%trans Ermile %}</a>
+          <div class="meta"><span>{%trans Joined in 2018 %}</span></div>
         </div>
         <div class="cauto">
           <img src="http://code.ermile.dev/siftal/images/avatar/1.png" class="mini">
         </div>
-        <div class="desc c12">Ermile requested permission to transfer <b>Tejarak</b> team to you</div>
+        <div class="desc c12">{%trans Ermile requested permission to transfer %}<b>{%trans Tejarak %}</b>{%trans team to you %}</div>
       </div>
       <div class="footer f">
         <div class="c6 s pA5"><button class="btn success outline block">{%trans "Approve"%}</button></div>
@@ -236,24 +236,24 @@
     </div>
     <div class="vcard shadow mA10">
       <div class="content">
-        <a class="header">Javad Evazzadeh</a>
-        <div class="meta"><span>3 days ago</span> <a href="#">Ermile</a></div>
+        <a class="header">{%trans Javad Evazzadeh %}</a>
+        <div class="meta"><span>{%trans 3 days ago %}</span> <a href="#">{%trans Ermile %}</a></div>
         <img src="http://code.ermile.dev/siftal/images/tools/paragraph.png" class="mT15 op50">
       </div>
-      <div class="footer pAn"><button class="btn block primary">Check more!</button></div>
+      <div class="footer pAn"><button class="btn block primary">{%trans Check more! %}</button></div>
     </div>
     <div class="small mA10 txtc">
       <a href="#" class="vcard shadow">
        <img src="http://code.ermile.dev/siftal/images/avatar/1.png">
         <div class="content">
-         <div class="header">Javad Evazzdeh</div>
-         <div class="meta"><span>CEO and Founder</span></div>
+         <div class="header">{%trans Javad Evazzdeh %}</div>
+         <div class="meta"><span>{%trans CEO and Founder %}</span></div>
         </div>
       </a>
       <a href="#" class="vcard shadow">
        <img src="http://code.ermile.dev/siftal/images/avatar/2.png">
         <div class="content">
-         <button class="btn block danger">Remove</button>
+         <button class="btn block danger">{%trans Remove %}</button>
         </div>
       </a>
     </div>
@@ -263,9 +263,9 @@
 
 {%block clock%}
 <div class="pA10">
-  <h3><a href='sample/clock'>Clockpicker</a></h3>
+  <h3><a href='sample/clock'>{%trans Clockpicker %}</a></h3>
    <div class="input clockpicker w300">
-    <input type="text" class="input" value="09:30" placeholder="Choose clock">
+    <input type="text" class="input" value="09:30" placeholder="{%trans Choose clock %}">
    </div>
 </div>
 {%endblock%}
@@ -273,7 +273,7 @@
 
 {%block date%}
 <div class="pA10">
-  <h3><a href='sample/date'>Datepicker</a></h3>
+  <h3><a href='sample/date'>{%trans Datepicker %}</a></h3>
     <div class="input pB5">
      <input class="datepicker">
     </div>
