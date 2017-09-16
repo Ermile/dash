@@ -28,12 +28,12 @@
 
   <br/><br/><br/>
   <div class="dbox cards">
-    <h3 class="border-title">Page Grids</h3>
+    <h3 class="border-title">{%trans Page Grids %}</h3>
     {{ block('content_grid') }}
   </div>
 
   <div class="dbox cards">
-    <h3 class="border-title">Template Form</h3>
+    <h3 class="border-title">{%trans Template Form %}</h3>
     <div class="f">
       <div class="c"></div>
       <div class="f c7 m8 s12 g1 form-box">
@@ -44,17 +44,17 @@
   </div>
 
   <div class="dbox cards">
-    <h3 class="border-title">Messages</h3>
+    <h3 class="border-title">{%trans Messages %}</h3>
     {{ block('content_message') }}
   </div>
 
   <div class="dbox cards">
-    <h3 class="border-title">List</h3>
+    <h3 class="border-title">{%trans List %}</h3>
     {{ block('content_list') }}
   </div>
 
   <div class="dbox cards">
-    <h3 class="border-title">Headings</h3>
+    <h3 class="border-title">{%trans Headings %}</h3>
     {{ block('content_titles') }}
   </div>
 
@@ -120,7 +120,7 @@ $("#sidebar").append("<span id='page-cover'></span>");
 
 {%block content_grid%}
     <div class="temp-grid-box">
-      <p>one row will divide to the number of parts, if you just set class='c'</p>
+      <p>{%trans one row will divide to the number of parts, if you just set class='c' %}</p>
       <div class="f temp-grid">
           <div class="c">.C</div>
           <div class="c">.C</div>
@@ -131,7 +131,7 @@ $("#sidebar").append("<span id='page-cover'></span>");
     </div>
 
     <div class="temp-grid-box">
-      <p>on large screens if you just set class='x', it will take the x class ratio</p>
+      <p>{%trans on large screens if you just set class='x', it will take the x class ratio %}</p>
       <div class="f temp-grid">
           <div class="c12 x6">.C12 .X6</div>
           <div class="c12 x6">.C12 .X6</div>
@@ -139,7 +139,7 @@ $("#sidebar").append("<span id='page-cover'></span>");
     </div>
 
     <div class="temp-grid-box">
-    <p>three equal parts</p>
+    <p>{%trans three equal parts %}</p>
         <div class="f temp-grid">
             <div class="c4">.C4</div>
             <div class="c4">.C4</div>
@@ -148,7 +148,7 @@ $("#sidebar").append("<span id='page-cover'></span>");
     </div>
 
     <div class="temp-grid-box">
-    <p>sum of parts is 12, every part will take ratio of it's class number</p>
+    <p>{%trans sum of parts is 12, every part will take ratio of it's class number %}</p>
         <div class="f temp-grid">
             <div class="c3">.C3</div>
             <div class="c1">.C1</div>
@@ -159,7 +159,7 @@ $("#sidebar").append("<span id='page-cover'></span>");
     </div>
 
     <div class="temp-grid-box">
-    <p>it will take just 6 part of 12</p>
+    <p>{%trans it will take just 6 part of 12 %}</p>
         <div class="f temp-grid">
             <div class="c3">.C3</div>
             <div class="c3">.C3</div>
@@ -167,7 +167,7 @@ $("#sidebar").append("<span id='page-cover'></span>");
     </div>
 
     <div class="temp-grid-box">
-    <p>float right boxes, by .os class</p>
+    <p>{%trans float right boxes, by .os class %}</p>
         <div class="f temp-grid">
             <div class="c3 os">.C3 OS</div>
             <div class="c3">.C3 .OS</div>
@@ -175,7 +175,7 @@ $("#sidebar").append("<span id='page-cover'></span>");
     </div>
 
     <div class="temp-grid-box">
-    <p>Responsive on medium devices, like tablet's by .m classes</p>
+    <p>{%trans Responsive on medium devices, like tablet's by .m classes %}</p>
         <div class="f temp-grid">
             <div class="c3 m6">.C3 .M6</div>
             <div class="c3 m6">.C3 .M6</div>
@@ -183,7 +183,7 @@ $("#sidebar").append("<span id='page-cover'></span>");
     </div>
 
     <div class="temp-grid-box">
-    <p>Responsive on mobile devices by .s classes</p>
+    <p>{%trans Responsive on mobile devices by .s classes %}</p>
         <div class="f temp-grid">
             <div class="c3 m6 s12">.C3 .M6 .S12</div>
             <div class="c3 m6 s12">.C3 .M6 .S12</div>
@@ -195,16 +195,16 @@ $("#sidebar").append("<span id='page-cover'></span>");
 
 
 {%block content_message%}
-  <div class="msg">message (.msg)</div>
-  <div class="msg warning">message warning (.msg .warning)</div>
-  <div class="msg info">message info (.msg .info)</div>
-  <div class="msg success">message success (.msg .success)</div>
-  <div class="msg error">message error (.msg .error)</div>
-  <div class="msg danger">message danger (.msg .danger)</div>
-  <div class="msg compact">message compact (.msg .compact)</div>
-  <div class="msg small">message small (.msg .small)</div>
-  <div class="msg big">message big (.msg .big)</div>
-  <div class="msg massive">message massive (.msg .massive)</div>
+  <div class="msg">{%trans message (.msg) %}</div>
+  <div class="msg warning">{%trans message warning (.msg .warning) %}</div>
+  <div class="msg info">{%trans message info (.msg .info) %}</div>
+  <div class="msg success">{%trans message success (.msg .success) %}</div>
+  <div class="msg error">{%trans message error (.msg .error) %}</div>
+  <div class="msg danger">{%trans message danger (.msg .danger) %}</div>
+  <div class="msg compact">{%trans message compact (.msg .compact) %}</div>
+  <div class="msg small">{%trans message small (.msg .small) %}</div>
+  <div class="msg big">{%trans message big (.msg .big) %}</div>
+  <div class="msg massive">{%trans message massive (.msg .massive) %}</div>
 {%endblock%}
 
 
@@ -227,7 +227,7 @@ $("#sidebar").append("<span id='page-cover'></span>");
       <div class="cauto s12 g1">
        <div>
         <input type="file" name="logo" id="logo" accept="image/gif, image/jpeg, image/png" data-preview="">
-        <label for="logo" title="allowed extentions jpg, png (gif for bussiness plans). Max 500Kb">
+        <label for="logo" title="{%trans allowed extentions jpg, png (gif for bussiness plans). Max 500Kb %}">
         </label>
        </div>
       </div>
@@ -242,48 +242,48 @@ $("#sidebar").append("<span id='page-cover'></span>");
          <div class="f radio1">
           <div class="c6">
            <input type="radio" id="r-private" name="privacy" value="private" checked="">
-           <label for="r-private">Private</label>
+           <label for="r-private">{%trans Private %}</label>
           </div>
           <div class="c6">
            <input type="radio" id="r-public" name="privacy" value="public">
-           <label for="r-public">Public</label>
+           <label for="r-public">{%trans Public %}</label>
           </div>
          </div>
         </div>
       </div>
 
       <div class="f g1">
-        <div class="cauto s0 lbl"><label for="shortName">Short Name</label></div>
+        <div class="cauto s0 lbl"><label for="shortName">{%trans Short Name %}</label></div>
         <div class="c s12">
          <input type="text" name="shortName" id="shortName" placeholder="Like &quot;Ermile&quot;" value="" maxlength="30" minlength="5" pattern=".{5,30}" title="Enter a valid short name from 5 to 50 character">
         </div>
       </div>
 
       <div class="f g1">
-        <div class="cauto s0 lbl"><label for="shortName">phoneNumber</label></div>
+        <div class="cauto s0 lbl"><label for="shortName">{%trans phoneNumber %}</label></div>
         <div class="c s12">
          <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Like &quot;1234&quot;" value="" maxlength="30" minlength="5" pattern=".{5,30}" title="Enter a valid short name from 5 to 50 character">
         </div>
       </div>
 
       <div class="f g1">
-        <div class="cauto s0 lbl"><label for="Alias">Alias</label></div>
+        <div class="cauto s0 lbl"><label for="Alias">{%trans Alias %}</label></div>
         <div class="c s12">
          <input type="text" name="Alias" id="Alias" placeholder="This is &quot;Disabled&quot;" value="" maxlength="30" minlength="5" pattern=".{5,30}" title="Enter a valid short name from 5 to 50 character" disabled="">
         </div>
       </div>
 
       <div class="f g1">
-        <div class="cauto s0 lbl"><span>Privacy mode</span></div>
+        <div class="cauto s0 lbl"><span>{%trans Privacy mode %}</span></div>
         <div class="c">
          <div class="f radio1 v">
           <div class="c6">
            <input type="radio" id="r-private2" name="privacy2" value="private" checked="">
-           <label for="r-private2">Private</label>
+           <label for="r-private2">{%trans Private %}</label>
           </div>
           <div class="c6">
            <input type="radio" id="r-public2" name="privacy2" value="public">
-           <label for="r-public2">Public</label>
+           <label for="r-public2">{%trans Public %}</label>
           </div>
          </div>
         </div>
@@ -297,50 +297,50 @@ $("#sidebar").append("<span id='page-cover'></span>");
 
 
       <div class="g1">
-       <h4>Default setting for new members of team</h4>
+       <h4>{%trans Default setting for new members of team %}{%trans  %}</h4>
        <div class="f check1">
 
         <div class="c4 s12">
          <input type="checkbox" name="showAvatar" id="showAvatar" checked="">
-         <label for="showAvatar">Show users avatars</label>
+         <label for="showAvatar">{%trans Show users avatars %}</label>
         </div>
 
         <div class="c4 s6">
          <input type="checkbox" name="allowPlus" id="allowPlus" checked="">
-         <label for="allowPlus">Allow plus</label>
+         <label for="allowPlus">{%trans Allow plus %}</label>
         </div>
         <div class="c4 s6">
          <input type="checkbox" name="allowMinus" id="allowMinus" checked="">
-         <label for="allowMinus">Allow minus</label>
+         <label for="allowMinus">{%trans Allow minus %}</label>
         </div>
 
         <div class="c4 s6">
          <input type="checkbox" name="remoteUser" id="remoteUser" disabled="">
-         <label for="remoteUser">Remote user</label>
+         <label for="remoteUser">{%trans Remote user %}</label>
         </div>
         <div class="c4 s6">
          <input type="checkbox" name="24h" id="24h">
-         <label for="24h">24 hour</label>
+         <label for="24h">{%trans 24 hour %}</label>
         </div>
 
        </div>
        <div class="check2">
         <div class="c4 s6">
          <input type="checkbox" name="allowPlus2" id="allowPlus2">
-         <label for="allowPlus2">allowPlus</label>
+         <label for="allowPlus2">{%trans allowPlus %}</label>
         </div>
        </div>
         <div class="f g1">
-          <div class="cauto s0 lbl"><span>Privacy mode</span></div>
+          <div class="cauto s0 lbl"><span>{%trans Privacy mode %}</span></div>
           <div class="c">
            <div class="f radio2 v">
             <div class="c6">
              <input type="radio" id="r-private2-s" name="privacy2-s" value="private" checked="">
-             <label for="r-private2-s">Private</label>
+             <label for="r-private2-s">{%trans Private %}</label>
             </div>
             <div class="c6">
              <input type="radio" id="r-public2-s" name="privacy2-s" value="public">
-             <label for="r-public2-s">Public</label>
+             <label for="r-public2-s">{%trans Public %}</label>
             </div>
            </div>
           </div>
@@ -354,7 +354,7 @@ $("#sidebar").append("<span id='page-cover'></span>");
 
       <div class="c12 s12 check1">
        <input type="checkbox" name="advance" id="advance">
-       <label for="advance">Advance</label>
+       <label for="advance">{%trans Advance %}</label>
       </div>
       <div class="c3 os s12">
        <input type="submit" value="Add" class="bp">
@@ -376,18 +376,18 @@ $("#sidebar").append("<span id='page-cover'></span>");
 
 {%block content_list%}
   <ul class="list">
-    <li><a href="">First</a></li>
-    <li><a href="">Second</a></li>
-    <li><a href="">Third</a></li>
+    <li><a href="">{%trans First %}</a></li>
+    <li><a href="">{%trans Second %}</a></li>
+    <li><a href="">{%trans Third %}</a></li>
   </ul>
 {%endblock%}
 
 {%block content_titles%}
-  <h1>This is heading 1</h1>
-  <h2>This is heading 2</h2>
-  <h3>This is heading 3</h3>
-  <h4>This is heading 4</h4>
-  <h5>This is heading 5</h5>
-  <h6>This is heading 6</h6>
+  <h1>{%trans This is heading 1 %}</h1>
+  <h2>{%trans This is heading 2 %}</h2>
+  <h3>{%trans This is heading 3 %}</h3>
+  <h4>{%trans This is heading 4 %}</h4>
+  <h5>{%trans This is heading 5 %}</h5>
+  <h6>{%trans This is heading 6 %}</h6>
 {%endblock%}
 

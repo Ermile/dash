@@ -29,7 +29,7 @@
 
 <div class="cbox">
   <h3>{%trans "Colored"%}</h3>
-  <p>A table's colors can be changed</p>
+  <p>{%trans A table's colors can be changed %}</p>
 
   <div class="example">
     <table class="tbl primary">
@@ -76,7 +76,7 @@
 
 <div class="cbox">
   <h3>{%trans "Table head options"%}</h3>
-  <p>Similar to colored tables, use one of modifier classes to make rows appear colored.</p>
+  <p>{%trans Similar to colored tables, use one of modifier classes to make rows appear colored. %}</p>
 
   <table class="tbl">
     <thead class="primary">
@@ -151,13 +151,13 @@
         {{block('thead')}}
       </thead>
       <tbody>
-        <tr class="positive"><th>1</th><td><i class="sf-check"></i>Javad</td><td>Evazzadeh</td><td>@evazzadeh</td></tr>
-        <tr><th>2</th><td>Reza</td><td class="positive">Mohiti</td><td>@biqarar</td></tr>
-        <tr><th>3</th><td class="negative">Hasan</td><td class="negative">Salehi</td><td>@baravak</td></tr>
-        <tr class="negative"><th>1</th><td>Javad</td><td><i class="sf-pencil-square-o"></i>Evazzadeh</td><td>@evazzadeh</td></tr>
-        <tr class="disabled"><th>2</th><td>Reza</td><td>Mohiti</td><td>@biqarar</td></tr>
-        <tr class="active"><th>3</th><td>Hasan</td><td>Salehi</td><td>@baravak</td></tr>
-        <tr class="warning"><th>3</th><td>Hasan</td><td>Salehi</td><td>@baravak</td></tr>
+        <tr class="positive"><th>1</th><td><i class="sf-check"></i>{%trans Javad %}</td><td>{%trans Evazzadeh %}</td><td>@evazzadeh</td></tr>
+        <tr><th>2</th><td>{%trans Reza %}</td><td class="positive">{%trans Mohiti %}</td><td>@biqarar</td></tr>
+        <tr><th>3</th><td class="negative">{%trans Hasan %}</td><td class="negative">{%trans Salehi %}</td><td>@baravak</td></tr>
+        <tr class="negative"><th>1</th><td>{%trans Javad %}</td><td><i class="sf-pencil-square-o"></i>{%trans Evazzadeh %}</td><td>@evazzadeh</td></tr>
+        <tr class="disabled"><th>2</th><td>{%trans Reza %}</td><td>{%trans Mohiti %}</td><td>@biqarar</td></tr>
+        <tr class="active"><th>3</th><td>{%trans Hasan %}</td><td>{%trans Salehi %}</td><td>@baravak</td></tr>
+        <tr class="warning"><th>3</th><td>{%trans Hasan %}</td><td>{%trans Salehi %}</td><td>@baravak</td></tr>
       </tbody>
       <tfoot>
         {{block('tfoot')}}
@@ -169,7 +169,7 @@
 
 <div class="cbox">
   <h3>{%trans "Bordered table"%}</h3>
-  <p>Add <code class='code1'>.bordered</code> for borders on all sides of the table and cells.</p>
+  <p>{%trans Add <code class='code1'>.bordered</code> for borders on all sides of the table and cells. %}</p>
   <div class="example">
     <table class="tbl bordered">
       {{block('tblSimple')}}
@@ -186,7 +186,7 @@
 <div class="cbox">
   <h3>{%trans "Sizes"%}</h3>
   <h4>{%trans "Compact"%}</h4>
-  <p>A table may sometimes need to be more compact to make more rows visible at a time</p>
+  <p>{%trans A table may sometimes need to be more compact to make more rows visible at a time %}</p>
   <div class="example">
     <table class="tbl compact">
       {{block('tblSimple')}}
@@ -200,21 +200,21 @@
     </table>
   </div>
   <h4>{%trans "Padded"%}</h4>
-  <p>A table may sometimes need to be more padded for legibility</p>
+  <p>{%trans A table may sometimes need to be more padded for legibility %}</p>
   <div class="example">
   <table class="tbl padded">
     {{block('tblSimple')}}
   </table>
   </div>
   <h4>{%trans "Small"%}</h4>
-  <p>A table may sometimes need to be small</p>
+  <p>{%trans A table may sometimes need to be small %}</p>
   <div class="example">
   <table class="tbl sm">
     {{block('tblSimple')}}
   </table>
   </div>
   <h4>{%trans "Large"%}</h4>
-  <p>A table may sometimes need to be large</p>
+  <p>{%trans A table may sometimes need to be large %}</p>
   <div class="example">
   <table class="tbl lg">
     {{block('tblSimple')}}
@@ -225,7 +225,7 @@
 
 <div class="cbox">
   <h3>{%trans "Sortable heading"%}</h3>
-  <p>Add <code class='code1'>data-sort=desc|asc</code> to table header for add icon of sorting</p>
+  <p>{%trans Add <code class='code1'>data-sort=desc|asc</code> to table header for add icon of sorting %}</p>
   <div class="example">
     <table class="tbl bordered">
       <thead>
@@ -285,9 +285,9 @@
 {%block trow1%}
   <tr>
     <th>1</th>
-    <td>Javad</td>
-    <td>Evazzadeh</td>
-    <td>@evazzadeh</td>
+    <td>{%trans Javad %}</td>
+    <td>{%trans Evazzadeh %}</td>
+    <td>{%trans @evazzadeh %}</td>
   </tr>
 {%endblock%}
 
@@ -295,9 +295,9 @@
 {%block trow2%}
   <tr>
     <th>2</th>
-    <td>Reza</td>
-    <td>Mohiti</td>
-    <td>@biqarar</td>
+    <td>{%trans Reza %}</td>
+    <td>{%trans Mohiti %}</td>
+    <td>{%trans @biqarar %}</td>
   </tr>
 {%endblock%}
 
@@ -305,9 +305,9 @@
 {%block trow3%}
   <tr>
     <th>3</th>
-    <td>Hasan</td>
-    <td>Salehi</td>
-    <td>@baravak</td>
+    <td>{%trans Hasan %}</td>
+    <td>{%trans Salehi %}</td>
+    <td>{%trans @baravak %}</td>
   </tr>
 {%endblock%}
 
@@ -317,29 +317,29 @@
     <thead><tr><th colspan="3">Git Repository</th></tr></thead>
       <tbody>
         <tr>
-          <td class="collapsing selectable"><a href="#"><i class="sf-folder-2"></i> node_modules</td></a>
-          <td>Initial commit</td>
+          <td class="collapsing selectable"><a href="#"><i class="sf-folder-2"></i>{%trans  node_modules %}</td></a>
+          <td>{%trans Initial commit %}</td>
           <td class="collapsing">10 hours ago</td>
         </tr>
         <tr>
-          <td class="selectable"><a href='#'><i class="sf-folder-2"></i> test</a></td>
-          <td>Initial commit</td>
-          <td>10 hours ago</td>
+          <td class="selectable"><a href='#'><i class="sf-folder-2"></i>{%trans  test %}</a></td>
+          <td>{%trans Initial commit %}</td>
+          <td>{%trans 10 hours ago %}</td>
         </tr>
         <tr>
-          <td class="selectable"><a href='#'><i class="sf-folder-2"></i> build</a></td>
-          <td>Initial commit</td>
-          <td>10 hours ago</td>
+          <td class="selectable"><a href='#'><i class="sf-folder-2"></i>{%trans  build %}</a></td>
+          <td>{%trans Initial commit %}</td>
+          <td>{%trans 10 hours ago %}</td>
         </tr>
         <tr>
-          <td class="selectable"><a href='#'><i class="sf-file-o"></i> package.json</a></td>
-          <td>Initial commit</td>
-          <td>10 hours ago</td>
+          <td class="selectable"><a href='#'><i class="sf-file-o"></i>{%trans  package.json %}</a></td>
+          <td>{%trans Initial commit %}</td>
+          <td>{%trans 10 hours ago %}</td>
         </tr>
         <tr>
-          <td class="selectable"><a href='#'><i class="sf-file-o"></i> Gruntfile.js</a></td>
-          <td>Initial commit</td>
-          <td>10 hours ago</td>
+          <td class="selectable"><a href='#'><i class="sf-file-o"></i>{%trans  Gruntfile.js %}</a></td>
+          <td>{%trans Initial commit %}</td>
+          <td>{%trans 10 hours ago %}</td>
         </tr>
       </tbody>
     </table>
