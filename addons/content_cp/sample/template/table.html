@@ -4,15 +4,15 @@
 {%block content%}
 
 <div class="tbox">
-  <h2>{%trans "Tables"%}</h2>
-  <p>{%trans "Documentation and examples for tables with Siftal."%}</p>
+  <h2>{%trans"Tables"%}</h2>
+  <p>{%trans"Documentation and examples for tables with Siftal."%}</p>
 </div>
 
 <div class="cbox">
-  <h3>{%trans "Examples"%}</h3>
-  <p>{%trans "Just add the base class <code class='code1'>.tbl</code> to any <code class='code1'>&lt;table&gt;</code>, then extend with custom styles or our various included modifier classes."%}</p>
+  <h3>{%trans"Examples"%}</h3>
+  <p>{%trans"Just add the base class <code class='code1'>.tbl</code> to any <code class='code1'>&lt;table&gt;</code>, then extend with custom styles or our various included modifier classes."%}</p>
 
-  <h4>{%trans "Simple table"%}</h4>
+  <h4>{%trans"Simple table"%}</h4>
   <div class="example">
     <table class="tbl">
       {{block('tblSimple')}}
@@ -28,8 +28,8 @@
 
 
 <div class="cbox">
-  <h3>{%trans "Colored"%}</h3>
-  <p>{%trans A table's colors can be changed %}</p>
+  <h3>{%trans"Colored"%}</h3>
+  <p>{%trans "A table's colors can be changed" %}</p>
 
   <div class="example">
     <table class="tbl primary">
@@ -75,8 +75,8 @@
 
 
 <div class="cbox">
-  <h3>{%trans "Table head options"%}</h3>
-  <p>{%trans Similar to colored tables, use one of modifier classes to make rows appear colored. %}</p>
+  <h3>{%trans"Table head options"%}</h3>
+  <p>{%trans "Similar to colored tables, use one of modifier classes to make rows appear colored." %}</p>
 
   <table class="tbl">
     <thead class="primary">
@@ -98,8 +98,8 @@
 
 
 <div class="cbox">
-  <h3>{%trans "No Zebra!"%}</h3>
-  <p>{%trans "Use <code class='code1'>.dead</code> to add zebra-striping to any table row within the <code class='code1'>&lt;tbody&gt;</code>."%}</p>
+  <h3>{%trans"No Zebra!"%}</h3>
+  <p>{%trans"Use <code class='code1'>.dead</code> to add zebra-striping to any table row within the <code class='code1'>&lt;tbody&gt;</code>."%}</p>
   <div class="example">
     <table class="tbl dead">
       <thead>
@@ -142,22 +142,22 @@
 
 
 <div class="cbox">
-  <h3>{%trans "Custom cell"%}</h3>
-  <p>{%trans "A cell or row may let a user know whether a value is good or bad."%}</p>
-  <p>{%trans "you can add <code class='code1'>.positive</code>, <code class='code1'>.negative</code>, <code class='code1'>.active</code>, <code class='code1'>.warning</code> and <code class='code1'>.disabled</code> to create custom design on cell or rows"%}</p>
+  <h3>{%trans"Custom cell"%}</h3>
+  <p>{%trans"A cell or row may let a user know whether a value is good or bad."%}</p>
+  <p>{%trans"you can add <code class='code1'>.positive</code>, <code class='code1'>.negative</code>, <code class='code1'>.active</code>, <code class='code1'>.warning</code> and <code class='code1'>.disabled</code> to create custom design on cell or rows"%}</p>
   <div class="example">
     <table class="tbl dead">
       <thead>
         {{block('thead')}}
       </thead>
       <tbody>
-        <tr class="positive"><th>1</th><td><i class="sf-check"></i>{%trans Javad %}</td><td>{%trans Evazzadeh %}</td><td>@evazzadeh</td></tr>
-        <tr><th>2</th><td>{%trans Reza %}</td><td class="positive">{%trans Mohiti %}</td><td>@biqarar</td></tr>
-        <tr><th>3</th><td class="negative">{%trans Hasan %}</td><td class="negative">{%trans Salehi %}</td><td>@baravak</td></tr>
-        <tr class="negative"><th>1</th><td>{%trans Javad %}</td><td><i class="sf-pencil-square-o"></i>{%trans Evazzadeh %}</td><td>@evazzadeh</td></tr>
-        <tr class="disabled"><th>2</th><td>{%trans Reza %}</td><td>{%trans Mohiti %}</td><td>@biqarar</td></tr>
-        <tr class="active"><th>3</th><td>{%trans Hasan %}</td><td>{%trans Salehi %}</td><td>@baravak</td></tr>
-        <tr class="warning"><th>3</th><td>{%trans Hasan %}</td><td>{%trans Salehi %}</td><td>@baravak</td></tr>
+        <tr class="positive"><th>1</th><td><i class="sf-check"></i>{%trans "Javad" %}</td><td>{%trans "Evazzadeh" %}</td><td>@evazzadeh</td></tr>
+        <tr><th>2</th><td>{%trans "Reza" %}</td><td class="positive">{%trans "Mohiti" %}</td><td>@biqarar</td></tr>
+        <tr><th>3</th><td class="negative">{%trans "Hasan" %}</td><td class="negative">{%trans "Salehi" %}</td><td>@baravak</td></tr>
+        <tr class="negative"><th>1</th><td>{%trans "Javad" %}</td><td><i class="sf-pencil-square-o"></i>{%trans "Evazzadeh" %}</td><td>@evazzadeh</td></tr>
+        <tr class="disabled"><th>2</th><td>{%trans "Reza" %}</td><td>{%trans "Mohiti" %}</td><td>@biqarar</td></tr>
+        <tr class="active"><th>3</th><td>{%trans "Hasan" %}</td><td>{%trans "Salehi" %}</td><td>@baravak</td></tr>
+        <tr class="warning"><th>3</th><td>{%trans "Hasan" %}</td><td>{%trans "Salehi" %}</td><td>@baravak</td></tr>
       </tbody>
       <tfoot>
         {{block('tfoot')}}
@@ -168,8 +168,8 @@
 
 
 <div class="cbox">
-  <h3>{%trans "Bordered table"%}</h3>
-  <p>{%trans Add <code class='code1'>.bordered</code> for borders on all sides of the table and cells. %}</p>
+  <h3>{%trans"Bordered table"%}</h3>
+  <p>{%trans "Add <code class='code1'>.bordered</code> for borders on all sides of the table and cells." %}</p>
   <div class="example">
     <table class="tbl bordered">
       {{block('tblSimple')}}
@@ -184,37 +184,37 @@
 
 
 <div class="cbox">
-  <h3>{%trans "Sizes"%}</h3>
-  <h4>{%trans "Compact"%}</h4>
-  <p>{%trans A table may sometimes need to be more compact to make more rows visible at a time %}</p>
+  <h3>{%trans"Sizes"%}</h3>
+  <h4>{%trans"Compact"%}</h4>
+  <p>{%trans "A table may sometimes need to be more compact to make more rows visible at a time" %}</p>
   <div class="example">
     <table class="tbl compact">
       {{block('tblSimple')}}
     </table>
   </div>
 
-  <h4>{%trans "Normal"%}</h4>
+  <h4>{%trans"Normal"%}</h4>
   <div class="example">
     <table class="tbl">
       {{block('tblSimple')}}
     </table>
   </div>
-  <h4>{%trans "Padded"%}</h4>
-  <p>{%trans A table may sometimes need to be more padded for legibility %}</p>
+  <h4>{%trans"Padded"%}</h4>
+  <p>{%trans "A table may sometimes need to be more padded for legibility" %}</p>
   <div class="example">
   <table class="tbl padded">
     {{block('tblSimple')}}
   </table>
   </div>
-  <h4>{%trans "Small"%}</h4>
-  <p>{%trans A table may sometimes need to be small %}</p>
+  <h4>{%trans"Small"%}</h4>
+  <p>{%trans "A table may sometimes need to be small" %}</p>
   <div class="example">
   <table class="tbl sm">
     {{block('tblSimple')}}
   </table>
   </div>
-  <h4>{%trans "Large"%}</h4>
-  <p>{%trans A table may sometimes need to be large %}</p>
+  <h4>{%trans"Large"%}</h4>
+  <p>{%trans "A table may sometimes need to be large" %}</p>
   <div class="example">
   <table class="tbl lg">
     {{block('tblSimple')}}
@@ -224,8 +224,8 @@
 
 
 <div class="cbox">
-  <h3>{%trans "Sortable heading"%}</h3>
-  <p>{%trans Add <code class='code1'>data-sort=desc|asc</code> to table header for add icon of sorting %}</p>
+  <h3>{%trans"Sortable heading"%}</h3>
+  <p>{%trans "Add <code class='code1'>data-sort=desc|asc</code> to table header for add icon of sorting" %}</p>
   <div class="example">
     <table class="tbl bordered">
       <thead>
@@ -285,9 +285,9 @@
 {%block trow1%}
   <tr>
     <th>1</th>
-    <td>{%trans Javad %}</td>
-    <td>{%trans Evazzadeh %}</td>
-    <td>{%trans @evazzadeh %}</td>
+    <td>{%trans "Javad" %}</td>
+    <td>{%trans "Evazzadeh" %}</td>
+    <td>{%trans "@evazzadeh" %}</td>
   </tr>
 {%endblock%}
 
@@ -295,9 +295,9 @@
 {%block trow2%}
   <tr>
     <th>2</th>
-    <td>{%trans Reza %}</td>
-    <td>{%trans Mohiti %}</td>
-    <td>{%trans @biqarar %}</td>
+    <td>{%trans "Reza" %}</td>
+    <td>{%trans "Mohiti" %}</td>
+    <td>{%trans "@biqarar" %}</td>
   </tr>
 {%endblock%}
 
@@ -305,9 +305,9 @@
 {%block trow3%}
   <tr>
     <th>3</th>
-    <td>{%trans Hasan %}</td>
-    <td>{%trans Salehi %}</td>
-    <td>{%trans @baravak %}</td>
+    <td>{%trans "Hasan" %}</td>
+    <td>{%trans "Salehi" %}</td>
+    <td>{%trans "@baravak" %}</td>
   </tr>
 {%endblock%}
 
@@ -317,29 +317,29 @@
     <thead><tr><th colspan="3">Git Repository</th></tr></thead>
       <tbody>
         <tr>
-          <td class="collapsing selectable"><a href="#"><i class="sf-folder-2"></i>{%trans  node_modules %}</td></a>
-          <td>{%trans Initial commit %}</td>
+          <td class="collapsing selectable"><a href="#"><i class="sf-folder-2"></i>{%trans "node_modules" %}</a></td>
+          <td>{%trans "Initial commit" %}</td>
           <td class="collapsing">10 hours ago</td>
         </tr>
         <tr>
-          <td class="selectable"><a href='#'><i class="sf-folder-2"></i>{%trans  test %}</a></td>
-          <td>{%trans Initial commit %}</td>
-          <td>{%trans 10 hours ago %}</td>
+          <td class="selectable"><a href='#'><i class="sf-folder-2"></i>{%trans "test" %}</a></td>
+          <td>{%trans "Initial commit" %}</td>
+          <td>{%trans "10 hours ago" %}</td>
         </tr>
         <tr>
-          <td class="selectable"><a href='#'><i class="sf-folder-2"></i>{%trans  build %}</a></td>
-          <td>{%trans Initial commit %}</td>
-          <td>{%trans 10 hours ago %}</td>
+          <td class="selectable"><a href='#'><i class="sf-folder-2"></i>{%trans "build" %}</a></td>
+          <td>{%trans "Initial commit" %}</td>
+          <td>{%trans "10 hours ago" %}</td>
         </tr>
         <tr>
-          <td class="selectable"><a href='#'><i class="sf-file-o"></i>{%trans  package.json %}</a></td>
-          <td>{%trans Initial commit %}</td>
-          <td>{%trans 10 hours ago %}</td>
+          <td class="selectable"><a href='#'><i class="sf-file-o"></i>{%trans "package.json" %}</a></td>
+          <td>{%trans "Initial commit" %}</td>
+          <td>{%trans "10 hours ago" %}</td>
         </tr>
         <tr>
-          <td class="selectable"><a href='#'><i class="sf-file-o"></i>{%trans  Gruntfile.js %}</a></td>
-          <td>{%trans Initial commit %}</td>
-          <td>{%trans 10 hours ago %}</td>
+          <td class="selectable"><a href='#'><i class="sf-file-o"></i>{%trans "Gruntfile.js" %}</a></td>
+          <td>{%trans "Initial commit" %}</td>
+          <td>{%trans "10 hours ago" %}</td>
         </tr>
       </tbody>
     </table>

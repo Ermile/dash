@@ -11,24 +11,24 @@
 
 <div class="cbox">
   <h3>{%trans "Example"%}</h3>
-  <p>{%trans Check more on cropprer documentation! <a target='_blank' href="https://github.com/fengyuanchen/cropperjs">Github</a> | <a target='_blank' href="https://fengyuanchen.github.io/cropperjs/">Example</a> %}</p>
+  <p>{%trans "Check more on cropprer documentation!" %}<a target='_blank' href="https://github.com/fengyuanchen/cropperjs">Github</a> | <a target='_blank' href="https://fengyuanchen.github.io/cropperjs/">Example</a></p>
 
   <div class="example cropper">
-    <p>{%trans Only run cropper without anything! %}</p>
+    <p>{%trans "Only run cropper without anything!" %}</p>
     <div>
     {{block('sampleImg')}}
     </div>
   </div>
 
   <div class="example cropper" data-aspectRatio='1.5' data-minCropBoxWidth='100' data-minCropBoxHeight='100'>
-    <p>{%trans Only run cropper with aspect ratio and min width and height on cropbox %}</p>
+    <p>{%trans "Only run cropper with aspect ratio and min width and height on cropbox" %}</p>
     <div>
     {{block('sampleImg')}}
     </div>
   </div>
 
   <div class="example cropper" data-aspectRatio='1' data-minCropBoxWidth='100' data-minCropBoxHeight='100' data-preview='.prev1' data-img='img'>
-    <p>{%trans Complete example with full function %}</p>
+    <p>{%trans "Complete example with full function" %}</p>
     <div class="f">
       <div class="c9 s12">
        <div>
@@ -95,7 +95,7 @@
   </div>
 
   <div class="example cropper" data-aspectRatio='1' data-minCropBoxWidth='100' data-minCropBoxHeight='100' data-preview='.prev2' data-img='.modal-body img'>
-    <p>{%trans run cropper with aspect ratio and min width and height in modal %}</p>
+    <p>{%trans "run cropper with aspect ratio and min width and height in modal" %}</p>
     <div class="f">
       <div class="cauto">
        <div class="btn primary" data-modal='cropperModal'>{%trans "Crop image in modal"%}</div>
@@ -109,7 +109,7 @@
      <div class='modal-dialog'>
       <h3 class='modal-title'>{%trans "Crop your avatar"%}</h3>
       <div class='modal-body'>
-       <p>{%trans Please choose and crop your image %}</p>
+       <p>{%trans "Please choose and crop your image" %}</p>
        {{block('sampleImg')}}
       </div>
       <div class="modal-footer">
@@ -123,7 +123,7 @@
 
 
   <div class="example cropper" data-img='.modal img'>
-    <p>complete example of crop in modal and show preview after that</p>
+    <p>{%trans "complete example of crop in modal and show preview after that" %}</p>
     <div class="f">
       <div class="input preview pTB10">
         <input type="file" accept="image/gif, image/jpeg, image/png" id="anyfile1" data-crop='cropperModal2'>
@@ -155,7 +155,7 @@
 
 
   <div class="example cropper" data-img='.modal img'>
-    <p>complete example of crop in modal and show preview after that with default image</p>
+    <p>{%trans "complete example of crop in modal and show preview after that with default image" %}</p>
     <div class="f">
       <div class="input preview pTB10">
         <input type="file" accept="image/gif, image/jpeg, image/png" id="anyfile2" data-crop='cropperModal3'>
