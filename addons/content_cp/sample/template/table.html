@@ -231,9 +231,9 @@
       <thead>
         <tr>
           <th>#</th>
-          <th data-sort='desc'><a href='#'>First Name</a></th>
-          <th data-sort><a href='#'>Last Name</a></th>
-          <th data-sort='asc'><a href='#'>Username</a></th>
+          <th data-sort='desc'><a href='#'>{%trans "First Name" %}</a></th>
+          <th data-sort><a href='#'>{%trans "Last Name" %}</a></th>
+          <th data-sort='asc'><a href='#'>{%trans "Username" %}</a></th>
         </tr>
       </thead>
       <tbody>
@@ -269,16 +269,16 @@
 {%block thead%}
   <tr>
     <th>#</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Username</th>
+    <th>{%trans "First Name" %}</th>
+    <th>{%trans "Last Name" %}</th>
+    <th>{%trans "Username" %}</th>
   </tr>
 {%endblock%}
 
 {%block tfoot%}
   <tr>
     <th>-</th>
-    <th colspan="3">Footer</th>
+    <th colspan="3">{%trans "Footer" %}</th>
   </tr>
 {%endblock%}
 
@@ -314,12 +314,12 @@
 
 {%block tblAdvance%}
   <table class="tbl bordered">
-    <thead><tr><th colspan="3">Git Repository</th></tr></thead>
+    <thead><tr><th colspan="3">{%trans "Git Repository" %}</th></tr></thead>
       <tbody>
         <tr>
           <td class="collapsing selectable"><a href="#"><i class="sf-folder-2"></i>{%trans "node_modules" %}</a></td>
           <td>{%trans "Initial commit" %}</td>
-          <td class="collapsing">10 hours ago</td>
+          <td class="collapsing">{%trans "10 hours ago" %}</td>
         </tr>
         <tr>
           <td class="selectable"><a href='#'><i class="sf-folder-2"></i>{%trans "test" %}</a></td>
