@@ -333,6 +333,8 @@ class enter
 		{
 			$host = $_SESSION['enter_referer'];
 			unset($_SESSION['enter_referer']);
+			// need another place
+			$_SESSION['lastEnterReferer'] = $host;
 		}
 		elseif(self::get_session('app_mode'))
 		{
