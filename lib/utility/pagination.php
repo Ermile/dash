@@ -453,7 +453,11 @@ class pagination
 			$result[] = self::make('prev', $current -1);
 		}
 
-		$result[] = self::make('spliter');
+		if($_result || $current -1 > 0)
+		{
+			$result[] = self::make('spliter');
+		}
+
 
 		if($_result)
 		{
