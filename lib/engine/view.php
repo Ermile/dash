@@ -18,6 +18,7 @@ class view
 		\dash\data::display_payMain("content_pay/layout.html");
 
 		\dash\data::display_pagination("includes/html/inc_pagination.html");
+		\dash\data::display_pagination_np("includes/html/inc_pagination_np.html");
 		\dash\data::display_hive("includes/html/inc_hive.html");
 		\dash\data::display_spay("includes/html/inc_spay.html");
 

@@ -16,6 +16,13 @@ trait pagination
 		return \dash\utility\pagination::init($_total_rows, $_length);
 	}
 
+	public static function pagination_np($_length)
+	{
+		$result = \dash\utility\pagination::init_np($_length);
+		$limit = " LIMIT $result[0] OFFSET $result[1] ";
+		return $limit;
+	}
+
 
 	public static function pagination_int($_count, $_length = 10, $_array = false)
 	{

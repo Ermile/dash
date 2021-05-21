@@ -405,5 +405,79 @@ class pagination
 
 		return $result;
 	}
+
+	public static function init_np($_limit = 10)
+	{
+		self::destroy();
+
+		self::$have_pages = true;
+		$page             = \dash\request::get('page');
+		$url_get_length   = \dash\request::get('length');
+
+		$page             = $page && ctype_digit($page) ? $page : 1;
+
+		if(mb_strlen($page) > 12)
+		{
+			$page = 1;
+		}
+
+		$page             = intval($page) > 0 ? intval($page) : 1;
+
+		$limit = intval($_limit);
+
+
+		if($page > 0)
+		{
+			$start_limit = $limit * ($page - 1);
+		}
+		else
+		{
+			$start_limit = 0;
+		}
+
+		$end_limit = $limit;
+
+		self::detail('page', $page);
+
+		return [$end_limit, $start_limit];
+	}
+
+
+	public static function np($_result = null, $_filter = false)
+	{
+		$current    = intval(self::detail('page'));
+
+		$result = [];
+		if($current -1 > 0)
+		{
+			$result[] = self::make('prev', $current -1);
+		}
+
+		$result[] = self::make('spliter');
+
+		if($_result)
+		{
+			$result[] = self::make('next', $current +1);
+		}
+
+		$this_link = \dash\url::current();
+		$get       = \dash\request::get();
+		unset($get['page']);
+
+		foreach ($result as $key => $value)
+		{
+			if(isset($value['link']) && $value['link'])
+			{
+				$temp_get             = $get;
+				$temp_get['page']     = $value['page'];
+				$temp_link            = $this_link . '?'. http_build_query($temp_get);
+				$result[$key]['link'] = $temp_link;
+			}
+		}
+
+		\dash\data::paginationnp($result);
+
+		return $result;
+	}
 }
 ?>

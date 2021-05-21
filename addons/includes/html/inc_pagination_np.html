@@ -1,0 +1,11 @@
+{% spaceless %}
+	{%if paginationnp %}
+		<nav class="pagination f fs11 mTB5" data-xhr='pagination'>
+			<div class="c flex justify-center">
+		{%for key, value in paginationnp%}
+				<a {%if value.link%} href="{{value.link}}" {%endif%}  {%if value.title%} title="{{value.title}}" {%endif%} {%if value.class%} class="{{value.class}}" {%endif%}>{{value.text | raw}}</a>
+		{%endfor%}
+			</div>
+		</nav>
+	{%endif%}
+{% endspaceless %}
