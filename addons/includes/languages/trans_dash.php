@@ -17,7 +17,7 @@ class twigTransTerms
 	echo T_("Date");                                                                  // Line 48
 	echo T_("Payment");                                                               // Line 147
 	echo T_("Parsian");                                                               // Line 45
-	echo T_("Detail");                                                                // Line 36
+	echo T_("Detail");                                                                // Line 31
 
 	//----------------------------------addons/includes/html/display-enter-blocks.html
 	echo T_("Mobile");                                                                // Line 411
@@ -1357,18 +1357,13 @@ class twigTransTerms
 
 	//-------------------------------------addons/content_su/apilog/home/logTable.html
 	echo T_("Auth");                                                                  // Line 10
-	echo T_("Header");                                                                // Line 16
-	echo T_("Header len");                                                            // Line 17
-	echo T_("Body");                                                                  // Line 18
-	echo T_("Bodylen");                                                               // Line 19
-	echo T_("Date send");                                                             // Line 20
-	echo T_("Page status");                                                           // Line 21
-	echo T_("Result status");                                                         // Line 22
-	echo T_("Response header");                                                       // Line 23
-	echo T_("Response body");                                                         // Line 24
-	echo T_("Datere sponse");                                                         // Line 25
-	echo T_("Notif");                                                                 // Line 26
-	echo T_("Response len");                                                          // Line 27
+	echo T_("Header len");                                                            // Line 16
+	echo T_("Bodylen");                                                               // Line 17
+	echo T_("Date send");                                                             // Line 18
+	echo T_("Page status");                                                           // Line 19
+	echo T_("Result status");                                                         // Line 20
+	echo T_("Datere sponse");                                                         // Line 21
+	echo T_("Response len");                                                          // Line 22
 
 	//--------------------------------------addons/content_su/apilog/home/display.html
 
