@@ -79,6 +79,11 @@ else
 	// echo("<p>There doesn't seem to be a <code>config.php</code> file. I need this before we can get started.</p>");
 }
 
+// define a to check array and
+function a()
+{
+	return \dash\get::index(...func_get_args());
+}
 
 
 ?>
