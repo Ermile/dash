@@ -79,6 +79,21 @@ class sms
 		{
 			return null;
 		}
+
+		// send by special subdomain
+		if(\dash\option::config('special_sms_provider'))
+		{
+			if(is_callable(['\\lib\\sms', 'send']))
+			{
+				return call_user_func(['\\lib\\sms', 'send'], ...func_get_args());
+			}
+			else
+			{
+				\dash\notif::error('Invalid SMS provider');
+				return false;
+			}
+		}
+
 		// disable status
 		// sms sevice is locked
 		if(!\dash\option::sms('kavenegar', 'status'))
@@ -179,6 +194,20 @@ class sms
 			return null;
 		}
 
+		// send by special subdomain
+		if(\dash\option::config('special_sms_provider'))
+		{
+			if(is_callable(['\\lib\\sms', 'send_array']))
+			{
+				return call_user_func(['\\lib\\sms', 'send_array'], ...func_get_args());
+			}
+			else
+			{
+				\dash\notif::error('Invalid SMS provider');
+				return false;
+			}
+		}
+
 		// disable status
 		// sms sevice is locked
 		if(!\dash\option::sms('kavenegar', 'status'))
@@ -248,6 +277,19 @@ class sms
 
 	public static function info()
 	{
+		// send by special subdomain
+		if(\dash\option::config('special_sms_provider'))
+		{
+			if(is_callable(['\\lib\\sms', 'info']))
+			{
+				return call_user_func(['\\lib\\sms', 'info'], ...func_get_args());
+			}
+			else
+			{
+				\dash\notif::error('Invalid SMS provider');
+				return false;
+			}
+		}
 		// disable status
 		// sms sevice is locked
 		if(!\dash\option::sms('kavenegar', 'status'))
