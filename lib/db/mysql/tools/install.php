@@ -204,6 +204,11 @@ trait install
 					}
 				}
 
+				if(strpos($qry_list, '_DATABASE_NAME_') !== false)
+				{
+					$qry_list = str_replace('_DATABASE_NAME_', $my_db_name, $qry_list);
+				}
+
 				// seperate with semicolon
 				if(strpos(substr($qry_list, 0, 100), '-- multi_query') !== false)
 				{
@@ -226,10 +231,23 @@ trait install
 						$qry = trim($qry);
 						if($qry)
 						{
-							self::query($qry, $my_db_name, ['resume_on_error' => true]);
-							if(\dash\db::error())
+							// create database need connect to mysql database
+
+							if(strpos($qry, 'CREATE DATABASE') !== false)
 							{
-								$has_error = true;
+								self::query($qry, 'mysql', ['resume_on_error' => true]);
+								if(\dash\db::error())
+								{
+									$has_error = true;
+								}
+							}
+							else
+							{
+								self::query($qry, $my_db_name, ['resume_on_error' => true]);
+								if(\dash\db::error())
+								{
+									$has_error = true;
+								}
 							}
 						}
 					}
