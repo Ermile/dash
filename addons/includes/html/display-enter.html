@@ -10,7 +10,11 @@
 {%block header%}
   <h1 class='logo'><a href='{%if xAppRequest%}{{url.kingdom}}/enter{%else%}{{url.kingdom}}{%endif%}' tabindex='1' data-direct>
 {%if options.enterprise%}
-    <img src='{{url.site}}/enterprise/{{options.enterprise}}/images/logo.png' alt='{{site.title}}'>
+    {%if options.freeSubdomain%}
+        <img src='{{url.base}}/enterprise/{{options.enterprise}}/images/logo.png' alt='{{site.title}}'>
+    {%else%}
+        <img src='{{url.site}}/enterprise/{{options.enterprise}}/images/logo.png' alt='{{site.title}}'>
+    {%endif%}
 {%else%}
     <img src='{{url.static}}/images/logo.png' alt='{{site.title}}'>
 {%endif%}

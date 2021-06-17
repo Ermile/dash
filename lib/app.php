@@ -185,8 +185,8 @@ class app
 	 */
 	public static function static_logo_url()
 	{
-		$url = \dash\url::site(). '/';
-		$url .= 'static/siftal/images/default/logo.png';
+		$url = \dash\url::siftal(). '/';
+		$url .= 'images/default/logo.png';
 		return $url;
 	}
 
@@ -196,27 +196,27 @@ class app
 	 */
 	public static function static_image_url($_type = 'image')
 	{
-		$url = \dash\url::site(). '/';
-		$url .= 'static/siftal/images/default/'. $_type. '.png';
+		$url = \dash\url::siftal(). '/';
+		$url .= 'images/default/'. $_type. '.png';
 		return $url;
 	}
 
 
 	public static function static_avatar_url($_type = 'default')
 	{
-		$url = \dash\url::site(). '/';
+		$url = \dash\url::siftal(). '/';
 		switch ($_type)
 		{
 			case 'male':
-				$url .= 'static/siftal/images/avatar/man.png';
+				$url .= 'images/avatar/man.png';
 				break;
 
 			case 'female':
-				$url .= 'static/siftal/images/avatar/woman.png';
+				$url .= 'images/avatar/woman.png';
 				break;
 
 			default:
-				$url .= 'static/siftal/images/default/avatar.png';
+				$url .= 'images/default/avatar.png';
 				break;
 		}
 		return $url;
