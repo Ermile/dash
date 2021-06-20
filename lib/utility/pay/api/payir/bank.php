@@ -13,17 +13,19 @@ class bank
 
         $default_args =
         [
-            'api'          => array_key_exists('api', $_args) ? $_args['api'] : null,
-            'amount'       => array_key_exists('amount', $_args) ? $_args['amount'] : null,
-            'redirect'     => array_key_exists('redirect', $_args) ? $_args['redirect'] : null,
-            'factorNumber' => array_key_exists('factorNumber', $_args) ? $_args['factorNumber'] : null,
-            'mobile'       => array_key_exists('mobile', $_args) ? $_args['mobile'] : null,
+            'api'             => array_key_exists('api', $_args) ? $_args['api'] : null,
+            'amount'          => array_key_exists('amount', $_args) ? $_args['amount'] : null,
+            'redirect'        => array_key_exists('redirect', $_args) ? $_args['redirect'] : null,
+            'factorNumber'    => array_key_exists('factorNumber', $_args) ? $_args['factorNumber'] : null,
+            'mobile'          => array_key_exists('mobile', $_args) ? $_args['mobile'] : null,
+            'description'     => array_key_exists('description', $_args) ? $_args['description'] : null,
+            'validCardNumber' => array_key_exists('validCardNumber', $_args) ? $_args['validCardNumber'] : null,
         ];
 
         $default_args = http_build_query($default_args);
 
         $handle = curl_init();
-        curl_setopt($handle, CURLOPT_URL, 'https://pay.ir/payment/send');
+        curl_setopt($handle, CURLOPT_URL, 'https://pay.ir/pg/send');
         curl_setopt($handle, CURLOPT_POSTFIELDS, $default_args);
         curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
@@ -33,9 +35,9 @@ class bank
 
         self::$payment_response = $result;
 
-        if(isset($result['status']) && intval($result['status']) === 1 && isset($result['transId']))
+        if(isset($result['status']) && intval($result['status']) === 1 && isset($result['token']))
         {
-            return $result['transId'];
+            return $result['token'];
         }
 
         if(array_key_exists('status', $result))
@@ -57,14 +59,14 @@ class bank
     {
         $default_args =
         [
-            'api'     => array_key_exists('api', $_args) ? $_args['api'] : null,
-            'transId' => array_key_exists('transId', $_args) ? $_args['transId'] : null,
+            'api'   => array_key_exists('api', $_args) ? $_args['api'] : null,
+            'token' => array_key_exists('token', $_args) ? $_args['token'] : null,
         ];
 
         $default_args = http_build_query($default_args);
 
         $handle = curl_init();
-        curl_setopt($handle, CURLOPT_URL, 'https://pay.ir/payment/verify');
+        curl_setopt($handle, CURLOPT_URL, 'https://pay.ir/pg/verify');
         curl_setopt($handle, CURLOPT_POSTFIELDS, $default_args);
         curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);

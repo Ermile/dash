@@ -51,18 +51,18 @@ class go
         // $payir['specialPaymentId'] = $transaction_id;
         $payir['factorNumber'] = $transaction_id;
 
-        $transId = \dash\utility\pay\api\payir\bank::pay($payir);
+        $token = \dash\utility\pay\api\payir\bank::pay($payir);
 
         \dash\utility\pay\setting::set_payment_response1(\dash\utility\pay\api\payir\bank::$payment_response);
 
-        if($transId)
+        if($token)
         {
             \dash\utility\pay\setting::set_condition('redirect');
-            \dash\utility\pay\setting::set_banktoken($transId);
+            \dash\utility\pay\setting::set_banktoken($token);
 
             \dash\utility\pay\setting::save();
 
-            $redirect_url = "https://pay.ir/payment/gateway/". $transId;
+            $redirect_url = "https://pay.ir/pg/". $token;
             \dash\redirect::to($redirect_url);
             return true;
         }

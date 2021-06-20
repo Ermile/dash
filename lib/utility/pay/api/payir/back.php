@@ -22,7 +22,7 @@ class back
         }
 
 
-        $transId      = isset($_REQUEST['transId'])        ? (string) $_REQUEST['transId']         : null;
+        $token      = isset($_REQUEST['token'])        ? (string) $_REQUEST['token']         : null;
         $status       = isset($_REQUEST['status'])         ? (string) $_REQUEST['status']          : null;
         $description  = isset($_REQUEST['description'])    ? (string) $_REQUEST['description']     : null;
         $factorNumber = isset($_REQUEST['factorNumber'])   ? (string) $_REQUEST['factorNumber']    : null;
@@ -30,14 +30,14 @@ class back
         $message      = isset($_REQUEST['message'])        ? (string) $_REQUEST['message']         : null;
 
 
-        if(!$transId)
+        if(!$token)
         {
-            \dash\log::set('pay:payir:transId:verify:not:found');
-            \dash\notif::error(T_("The payir payment transId not set"));
+            \dash\log::set('pay:payir:token:verify:not:found');
+            \dash\notif::error(T_("The payir payment token not set"));
             return \dash\utility\pay\setting::turn_back();
         }
 
-        \dash\utility\pay\setting::load_banktoken($_token, $transId, 'payir');
+        \dash\utility\pay\setting::load_banktoken($_token, $token, 'payir');
 
         if(\dash\utility\pay\setting::get_id())
         {
@@ -52,7 +52,7 @@ class back
 
         $payir            = [];
         $payir['api']     = \dash\option::config('payir', 'api');
-        $payir['transId'] = $transId;
+        $payir['token'] = $token;
 
         if(\dash\utility\pay\setting::get_plus())
         {
