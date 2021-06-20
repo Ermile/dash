@@ -138,11 +138,11 @@ class view
 		}
 
 		// add service detail
-		\dash\data::service_title(T_('Ermile'));
-		\dash\data::service_desc(T_('As easy as ABC is our slogan!'). '<br>'. T_('If you are not finded a solution for your problem, call us.'));
-		\dash\data::service_slogan(T_('Software Solution Designer'));
-		\dash\data::service_logo(\dash\url::static(). '/siftal/images/logo/ermile.png');
-		\dash\data::service_url('https://ermile.com');
+		\dash\data::service_title(T_('Jibres'));
+		\dash\data::service_desc(T_('Integrated Ecommerce Platform Software / Quickly Start Free! Online Store Website & Mobile Online Store & Social Marketing & POS Software / SEO Optimized'));
+		\dash\data::service_slogan(T_('Sell and enjoy'));
+		\dash\data::service_logo(\dash\url::static(). '/siftal/images/logo/jibres.png');
+		\dash\data::service_url('https://jibres.ir');
 
 		// toggle side bar
 		if(\dash\user::sidebar() === null || \dash\user::sidebar() === true)
