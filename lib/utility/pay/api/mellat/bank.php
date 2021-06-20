@@ -27,7 +27,16 @@ class bank
                 'exceptions'   => true,
             ];
 
-            $client = @new \SoapClient('https://bpm.shaparak.ir/pgwchannel/services/pgw?wsdl', $soap_meta);
+            if(\dash\option::config('mellat', 'FORCE_API_URL_BANK_PAYMENT'))
+            {
+                $api_url = \dash\option::config('mellat', 'FORCE_API_URL_BANK_PAYMENT');
+            }
+            else
+            {
+                $api_url = 'https://bpm.shaparak.ir/pgwchannel/services/pgw?wsdl';
+            }
+
+            $client = @new \SoapClient($api_url, $soap_meta);
 
             $result = $client->__soapCall('bpPayRequest', array($_args));
 
@@ -80,7 +89,16 @@ class bank
                 'exceptions'   => true,
             ];
 
-            $client    = @new \SoapClient('https://bpm.shaparak.ir/pgwchannel/services/pgw?wsdl', $soap_meta);
+            if(\dash\option::config('mellat', 'FORCE_API_URL_BANK_PAYMENT'))
+            {
+                $api_url = \dash\option::config('mellat', 'FORCE_API_URL_BANK_PAYMENT');
+            }
+            else
+            {
+                $api_url = 'https://bpm.shaparak.ir/pgwchannel/services/pgw?wsdl';
+            }
+
+            $client    = @new \SoapClient($api_url, $soap_meta);
 
             $result = $client->bpVerifyRequest($_args);
 
