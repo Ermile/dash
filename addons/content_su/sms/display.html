@@ -1,0 +1,25 @@
+{%extends display.crmMain%}
+
+
+{%block pageContent%}
+
+
+<div class="cbox">
+    <form method="post">
+
+      <div class="input mTB10">
+          <input type="tel" name="mobile" placeholder='{%trans "Mobile"%}' value="{{requestGET.mobile}}">
+      </div>
+      <textarea class="txt" name="msg" rows="10" placeholder='{%trans "What do you want to send to this user?"%}'>{{templateLoad}}</textarea>
+      <div class="f">
+        <div class="c"></div>
+        <div class="cauto">
+          <button type="submit" class=" xl w300 btn success mTB10" >{%trans "Send"%}</button>
+        </div>
+      </div>
+    </form>
+</div>
+
+
+{%endblock%}
+
