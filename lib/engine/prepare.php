@@ -165,14 +165,23 @@ class prepare
 			session_name(\dash\url::root());
 		}
 
+		if(\dash\option::config('free_subdomain'))
+		{
+			$cookie_domain = \dash\url::subdomain(). '.'. \dash\url::domain();
+		}
+		else
+		{
+			$cookie_domain = '.'. \dash\url::domain();
+		}
+
 		if(\dash\url::isLocal())
 		{
-			session_set_cookie_params(0, '/', '.'.\dash\url::domain(), false, true);
+			session_set_cookie_params(0, '/', $cookie_domain, false, true);
 		}
 		else
 		{
 			// set session cookie params
-			session_set_cookie_params(0, '/', '.'.\dash\url::domain(), true, true);
+			session_set_cookie_params(0, '/', $cookie_domain, true, true);
 		}
 
 		// start sessions
