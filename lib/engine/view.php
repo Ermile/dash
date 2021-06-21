@@ -140,7 +140,7 @@ class view
 		// add service detail
 		\dash\data::service_title(T_('Jibres'));
 		\dash\data::service_desc(T_('Integrated Ecommerce Platform Software / Quickly Start Free! Online Store Website & Mobile Online Store & Social Marketing & POS Software / SEO Optimized'));
-		\dash\data::service_slogan(T_('Sell and enjoy'));
+		\dash\data::service_slogan(T_('Ecommerce Platform'));
 		\dash\data::service_logo(\dash\url::static(). '/siftal/images/logo/jibres.png');
 		\dash\data::service_url('https://jibres.ir');
 
