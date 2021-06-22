@@ -28,15 +28,15 @@ class view
 
 		echo "<hr>";
 
-		$result = self::gitDiff();
+		// $result = self::gitDiff();
 
-		if(is_array($result))
-		{
-			foreach ($result as $key => $value)
-			{
-				echo $value;
-			}
-		}
+		// if(is_array($result))
+		// {
+		// 	foreach ($result as $key => $value)
+		// 	{
+		// 		echo $value;
+		// 	}
+		// }
 
 		\dash\code::boom();
 	}
