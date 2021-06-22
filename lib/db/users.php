@@ -432,7 +432,7 @@ class users
 				users
 			GROUP BY users.gender
 		";
-		$result = \dash\db::get($query, null, true);
+		$result = \dash\db::get($query, null);
 		return $result;
 	}
 
@@ -448,7 +448,7 @@ class users
 				users
 			GROUP BY users.status
 		";
-		$result = \dash\db::get($query, null, true);
+		$result = \dash\db::get($query, null);
 		return $result;
 	}
 
