@@ -38,7 +38,11 @@ class bank
 
             $client = @new \SoapClient($api_url, $soap_meta);
 
+            \dash\temp::set('mellatRawResponse', $client);
+
             $result = $client->__soapCall('bpPayRequest', array($_args));
+
+            \dash\temp::set('mellatRawResponse1', $result);
 
             self::$payment_response = $result;
 
@@ -61,6 +65,7 @@ class bank
         }
         catch (\Exception $e)
         {
+            \dash\temp::set('mellatRawResponse2', $e);
             \dash\log::set('payment:mellat:error:load:web:services');
             \dash\notif::error(T_("Error in load web services"));
             return false;
