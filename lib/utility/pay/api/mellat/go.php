@@ -35,7 +35,9 @@ class go
         $mellat['localDate']      = date("Ymd");
         $mellat['localTime']      = date("His");
         $mellat['additionalData'] = null;
-        $mellat['payerId']        = \dash\user::id();
+        $mellat['payerId']        = \dash\option::config('mellat', 'payerId');
+
+
 
 
         if(\dash\option::config('mellat', 'callBackUrl'))
