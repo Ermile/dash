@@ -97,7 +97,7 @@ class export
     public static function get_link()
     {
         $url = self::$temp_file;
-        $url = str_replace(root.'public_html', \dash\url::site(), $url);
+        $url = str_replace(root.'public_html', \dash\url::base(), $url);
         return $url;
     }
 
