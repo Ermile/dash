@@ -130,7 +130,7 @@ class apilog
 	private static function save_db()
 	{
 		// self::$apilog = [];
-		// return; // trun off api log for every service
+		return; // trun off api log for every service
 
 		if(self::$apilog)
 		{
