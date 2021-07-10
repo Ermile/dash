@@ -155,7 +155,11 @@ class header
 
 		$debug_backtrace = ['args' => func_get_args(), 'debug' => debug_backtrace(), 'server' => $_SERVER];
 		$debug_backtrace = json_encode($debug_backtrace, JSON_UNESCAPED_UNICODE);
-		\dash\log::file($debug_backtrace, "$_code.txt", 'header');
+
+		if(!\dash\option::config('force_stop_log_header'))
+		{
+			\dash\log::file($debug_backtrace, "$_code.txt", 'header');
+		}
 
 		// translate desc of header if in this level T_ fn is defined!
 		$translatedDesc = $desc;
