@@ -150,14 +150,7 @@ class kavenegar_api
 				$this->msg = $json_data["return"]["message"];
 			}
 
-			if(isset($json_data["entries"]))
-			{
-				return $json_data["entries"];
-			}
-			else
-			{
-				return false;
-			}
+			return $json_data;
 		}
 		else
 		{
