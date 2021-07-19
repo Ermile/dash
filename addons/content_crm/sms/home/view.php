@@ -16,7 +16,7 @@ class view
 		\dash\data::badge_text(T_('Dashboard'));
 
 		$get_balance = \dash\session::get('sms_panel_detail');
-		if(!$get_balance)
+		// if(!$get_balance)
 		{
 			$default =
 			[
@@ -26,12 +26,13 @@ class view
 			];
 			$get_balance = \dash\utility\sms::info();
 
-			if(is_array($get_balance))
+
+			if(isset($get_balance['entries']) && is_array($get_balance['entries']))
 			{
-				$get_balance = array_merge($default, $get_balance);
+				$get_balance = array_merge($default, $get_balance['entries']);
 			}
 
-			\dash\session::set('sms_panel_detail', $get_balance, null, (60 * 10));
+			\dash\session::set('sms_panel_detail', $get_balance, null, (60 * 1));
 		}
 
 		\dash\data::SMSbalance($get_balance);
