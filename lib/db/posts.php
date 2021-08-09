@@ -249,6 +249,13 @@ class posts
 			}
 		}
 
+		$offset = null;
+		if(isset($_options['offset']) && is_numeric($_options['offset']))
+		{
+			$offset = " OFFSET $_options[offset]";
+		}
+
+		$time = time();
 		$query =
 		"
 			SELECT
@@ -258,11 +265,11 @@ class posts
 			WHERE
 				posts.status   = 'publish' AND
 				posts.type     = 'post' AND
-				posts.language = '$lang'
+				posts.language = '$lang' AND
+				UNIX_TIMESTAMP(posts.publishdate) <= $time
 				$where
-
 			ORDER BY posts.publishdate DESC
-			$limit
+			$limit $offset
 		";
 		return \dash\db::get($query);
 	}
@@ -311,6 +318,12 @@ class posts
 			$limit = " LIMIT $limit_start, $limit ";
 		}
 
+		$offset = null;
+		if(isset($_options['offset']) && is_numeric($_options['offset']))
+		{
+			$offset = " OFFSET $_options[offset]";
+		}
+
 		$query =
 		"
 			SELECT
@@ -324,7 +337,7 @@ class posts
 				UNIX_TIMESTAMP(posts.publishdate) <= $time
 				$where
 			ORDER BY posts.publishdate DESC
-			$limit
+			$limit $offset
 		";
 		return \dash\db::get($query);
 	}
@@ -410,6 +423,12 @@ class posts
 			}
 		}
 
+		$offset = null;
+		if(isset($_options['offset']) && is_numeric($_options['offset']))
+		{
+			$offset = " OFFSET $_options[offset]";
+		}
+
 		$query =
 		"
 			SELECT
@@ -435,7 +454,7 @@ class posts
 				UNIX_TIMESTAMP(posts.publishdate) <= $time
 				$where
 			ORDER BY $order
-			LIMIT $_options[limit]
+			LIMIT $_options[limit] $offset
 		";
 
 		$result = \dash\db::get($query);

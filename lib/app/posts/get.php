@@ -137,6 +137,7 @@ trait get
 			'mode'       => null,
 			'post_id'    => null,
 			'subtype'    => null,
+			'offset'     => null,
 		];
 
 
@@ -165,6 +166,11 @@ trait get
 			$_options['where']['subtype'] = $_options['subtype'];
 		}
 
+		if($_options['special'] !== false)
+		{
+			$_options['where']['special'] = $_options['special'];
+		}
+
 		$get_last_posts = [];
 
 		if($_options['mode'] === 'similar')
@@ -189,7 +195,6 @@ trait get
 		}
 		elseif($_options['special'] !== false)
 		{
-			$_options['where']['special'] = $_options['special'];
 			$get_last_posts = \dash\db\posts::get_special_post($_options);
 		}
 		else
