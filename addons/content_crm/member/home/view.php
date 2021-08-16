@@ -113,7 +113,7 @@ class view
 		{
 			$args['pagination'] = false;
 			$args['pagenation'] = false;
-			$args['public_show_field'] = 'users.mobile';
+			$args['public_show_field'] = 'users.mobile, users.displayname';
 		}
 
 		$dataTable = \dash\app\user::list(\dash\request::get('q'), $args);
