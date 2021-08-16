@@ -32,6 +32,12 @@ class view
 		\dash\data::badge_link(\dash\url::this(). '/add');
 		\dash\data::badge_text(T_('Add new user'));
 
+		$exportGet = \dash\request::get();
+		$exportGet['export'] = 1;
+
+		\dash\data::badge2_link(\dash\url::this().'?'. http_build_query($exportGet));
+		\dash\data::badge2_text(T_('Export'));
+
 
 		if(!$args['order'])
 		{
@@ -103,11 +109,23 @@ class view
 		}
 
 
+		if(\dash\request::get('export'))
+		{
+			$args['pagination'] = false;
+			$args['pagenation'] = false;
+			$args['public_show_field'] = 'users.mobile';
+		}
+
 		$dataTable = \dash\app\user::list(\dash\request::get('q'), $args);
 
 		if(!is_array($dataTable))
 		{
 			$dataTable = [];
+		}
+
+		if(\dash\request::get('export'))
+		{
+			\dash\utility\export::csv(['name' => 'export_member', 'data' => $dataTable,]);
 		}
 
 		if($dataTable && is_array($dataTable))
